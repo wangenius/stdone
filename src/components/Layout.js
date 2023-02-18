@@ -25,6 +25,7 @@ export const Layout = (props) => {
                 <Exp/>
                 <Link className={"Button"} to={`/`}>home</Link>
                 <Link className={"Button"} to={`/files/`}>files</Link>
+
                 <Link className={"Button"} to={`/404/`}>About</Link>
 
             </Once>

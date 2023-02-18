@@ -6,14 +6,47 @@ module.exports = {
         title: `STDONE`,
     },
     plugins: [
+        'gatsby-plugin-theme-ui',
+        `gatsby-plugin-netlify-cms`,
+        `gatsby-transformer-remark`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-image`,
+        // `gatsby-plugin-feed-mdx`,
+        // `gatsby-plugin-root-import`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800,
+                        },
+                    },
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1200,
+                        },
+                    },
+                ],
+            },
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `src`,
-                path: `${__dirname}/src/`,
+                path: `${__dirname}/post/`,
             },
         },
-        `gatsby-transformer-remark`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {

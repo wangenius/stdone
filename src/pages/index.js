@@ -27,8 +27,6 @@ query MyQuery {
 }
 `
 export const IndexPage = ({data}) => {
-    console.log(data)
-
     return (
         <Layout>
             <Button label={"this is my blog"}/>

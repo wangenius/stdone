@@ -2,8 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import {Layout} from "./Layout";
 export default ({data}) => {
-
-
     const post = data.markdownRemark
     return (
         <Layout>
