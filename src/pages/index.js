@@ -5,22 +5,19 @@ import {graphql, Link} from "gatsby";
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark {
-    totalCount
+  allCosmicjsHellsies {
     edges {
       node {
+        bucket
         id
-        frontmatter{
-          title,date(formatString: "DD MMMM, YYYY")
-        }
-        fields {
-            slug
-          }
-        excerpt
+        content
+        status
+        slug
+        title
+        order
+        created_at(formatString: "YYYY MMMM DD")
+        created_by
       }
-    }
-    pageInfo {
-      perPage
     }
   }
 }
@@ -28,11 +25,11 @@ query MyQuery {
 const IndexPage = ({data}) => {
     return (
         <Layout>
-            {data.allMarkdownRemark.edges.map(({node}) => (
+            {data.allCosmicjsHellsies.edges.map(({node}) => (
                 <div key={node.id}>
-                    <h3>{node.frontmatter.title}<span>— {node.frontmatter.date}</span></h3>
-                    <p>{node.excerpt}</p>
-                    <Link to={node.fields.slug}>转到</Link>
+                    <h3>{node.title}<span>— {node.created_at}</span></h3>
+                    <p>{node.content}</p>
+                    <Link to={node.slug}>转到</Link>
                 </div>
             ))}
         </Layout>

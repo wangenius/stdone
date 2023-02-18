@@ -2,7 +2,7 @@ import {Layout} from "../components/Layout";
 import {graphql} from "gatsby";
 import React from "react";
 
-export default ({data})=>{
+const File =({data})=>{
 
     return <Layout>
         <table>
@@ -27,7 +27,7 @@ export default ({data})=>{
         </table>
     </Layout>
 }
-
+export default File
 
 export const query = graphql`
   query {

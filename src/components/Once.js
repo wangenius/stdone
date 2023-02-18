@@ -1,10 +1,9 @@
 import React, {createRef, forwardRef, useImperativeHandle} from "react";
-import {fn} from "../method/common";
 
 /** base memo component */
 export const Once =
     forwardRef((props, ref) => {
-        const {value, cs, open = true, lc = fn, rc = fn, ...rest} = props;
+        const {value, cs, open = true, ...rest} = props;
         const Ref = createRef();
 
         /** @Description 暴露组件 */
@@ -15,8 +14,6 @@ export const Once =
             <div
                 ref={Ref}
                 className={cs}
-                onClick={(event) => lc(event, value)}
-                onContextMenu={(event) => rc(event, value)}
                 {...rest}
             />
         );

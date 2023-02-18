@@ -4,10 +4,11 @@ module.exports = {
     },
     plugins: [
         'gatsby-plugin-theme-ui',
-        `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-image`,
+        `gatsby-plugin-offline`,
+
         {
             resolve: `gatsby-transformer-remark`,
             options: {
@@ -20,6 +21,18 @@ module.exports = {
                     },
                 ],
             },
+        },
+        {
+            resolve: 'gatsby-source-cosmicjs',
+            options: {
+                bucketSlug: "stdone-stdone",
+                objectTypes: ['hellsies'],
+                apiAccess: {
+                    read_key: "rFLd1CU7qxundp06fFLFpeelXubWvtKLlszYnLy5fL5UsgbQLl"
+                },
+                limit: 1000,
+                debug: false,
+            }
         },
         {
             resolve: `gatsby-plugin-mdx`,

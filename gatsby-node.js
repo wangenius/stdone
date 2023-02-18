@@ -3,7 +3,7 @@ const path = require(`path`)
 
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions
-    if (node.internal.type === `MarkdownRemark`) {
+    if (node.internal.type === `cosmicjsHellsies`) {
         const slug = createFilePath({node, getNode})
         createNodeField({
             node,
@@ -17,23 +17,21 @@ exports.createPages = async ({graphql, actions}) => {
     const {createPage} = actions
     const result = await graphql(`
     query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
+      allCosmicjsHellsies {
+       edges {
+           node {
+                slug
+                   }
+               }
+           }
+       }
   `)
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    result.data.allCosmicjsHellsies.edges.forEach(({node}) => {
         createPage({
-            path: node.fields.slug,
+            path: node.slug,
             component: path.resolve(`./src/components/post.js`),
             context: {
-                slug: node.fields.slug,
+                slug: node.slug,
             },
         })
     })
