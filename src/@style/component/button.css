@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*font size*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
+/*cursor*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
+/*font size*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
+/*cursor*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
+/*hover before 遮罩
+*/
+/*char*/
+/*background*/
+.Button {
+  cursor: url("/public/icon/hand.png"), pointer;
+  height: 30px;
+  border-radius: 8px;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+  padding: 0 20px;
+  margin: 0 1px;
+  background-color: transparent;
+  transition: all 200ms ease;
+  box-sizing: content-box;
+}
+.Button * {
+  pointer-events: none;
+}
+.Button::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.Button .text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Noto_Medium", "HarmonyOS Sans SC", "HarmonyOS Sans", "sans-serif";
+  font-size: 0.815rem;
+  color: #71717a;
+}
+.Button:hover {
+  background-color: rgba(210, 215, 232, 0.26);
+}
+.Button:hover .text {
+  color: #0f172a;
+}
+
+/*# sourceMappingURL=button.css.map */

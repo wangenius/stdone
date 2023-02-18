@@ -1,12 +1,3 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
@@ -31,7 +22,7 @@
 
     Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+    Edit `src/pages/index.js` to see your site update in real-time!
 
 4.  **Learn more**
 

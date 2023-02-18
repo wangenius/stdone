@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*font size*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
+/*cursor*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
+/*hover before 遮罩
+*/
+/*char*/
+/*background*/
+/*font size*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
+/*cursor*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
+.layout {
+  background-color: #eeeeee;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px 0, rgba(9, 30, 66, 0.08) 0 0 0 1px;
+  height: 40px;
+  border-radius: 0.8pc;
+  position: absolute;
+  z-index: 20;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+}
+.layout .Button {
+  margin-bottom: 5px;
+  height: 40px;
+  width: 100%;
+}
+.layout .Button .text {
+  display: inline;
+  text-align: center;
+}
+
+/*# sourceMappingURL=layout.css.map */
