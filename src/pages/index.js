@@ -1,5 +1,4 @@
 import * as React from "react"
-import {Button} from "../components/Button";
 import "../@style/index.css";
 import {Layout} from "../components/Layout";
 import {graphql, Link} from "gatsby";
@@ -26,14 +25,9 @@ query MyQuery {
   }
 }
 `
-export const IndexPage = ({data}) => {
+const IndexPage = ({data}) => {
     return (
         <Layout>
-            <Button label={"this is my blog"}/>
-            <p>
-                We're the only site running on your computer dedicated to showing the best
-                photos and videos of pandas eating lots of food.
-            </p>
             {data.allMarkdownRemark.edges.map(({node}) => (
                 <div key={node.id}>
                     <h3>{node.frontmatter.title}<span>— {node.frontmatter.date}</span></h3>
@@ -47,5 +41,3 @@ export const IndexPage = ({data}) => {
 
 
 export default IndexPage
-
-export const Head = () => <title>Hello</title>
