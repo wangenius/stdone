@@ -5,8 +5,6 @@ export default ({data}) => {
 
 
     const post = data.markdownRemark
-
-    document.title = post.frontmatter.title
     return (
         <Layout>
             <div>
