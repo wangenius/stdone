@@ -1,6 +1,4 @@
 import * as React from "react"
-import "../@style/index.css";
-import "../../public/global.css";
 import {Layout} from "../components/Layout";
 import {graphql, navigate} from "gatsby";
 import {Once} from "../components/Once";

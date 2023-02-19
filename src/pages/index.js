@@ -1,6 +1,6 @@
 import * as React from "react"
 import "../@style/index.css";
-import "../../public/global.css";
+import "../../global.css";
 import {Layout} from "../components/Layout";
 import {graphql} from "gatsby";
 import {Once} from "../components/Once";
@@ -39,7 +39,7 @@ const IndexPage = ({data}) => {
                          style={{width: 100, borderRadius: 150}}
                          alt={'avatar'}/>
                     <TypeAnimation
-                        sequence={["Hi bro. Here is me😊", 1000, "Architecture Graduate🎁", 1000, "but devote to CS🎈", 1000, "basketball lover🏀", 1000, "Eason Fan🍭", 1000,"nice to meet u🍭"]}
+                        sequence={["Hi bro. Here is me😊", 1000, "Architecture Graduate🎁", 1000, "but devote to CS🎈", 1000, "basketball lover🏀", 1000, "Eason Fan🍭", 1000, "nice to meet u🍭"]}
                         className={"hi"}>
 
                     </TypeAnimation>
