@@ -1,39 +1,15 @@
 module.exports = {
     siteMetadata: {
         title: `STDONE`,
+        author:"wangenius"
     },
     plugins: [
-        'gatsby-plugin-theme-ui',
-        `gatsby-plugin-sharp`,
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-image`,
         `gatsby-plugin-offline`,
-
-        {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-                plugins: [
-                    {
-                        resolve: `gatsby-remark-images`,
-                        options: {
-                            maxWidth: 800,
-                        },
-                    },
-                ],
-            },
-        },
-        {
-            resolve: 'gatsby-source-cosmicjs',
-            options: {
-                bucketSlug: "stdone-stdone",
-                objectTypes: ['hellsies'],
-                apiAccess: {
-                    read_key: "rFLd1CU7qxundp06fFLFpeelXubWvtKLlszYnLy5fL5UsgbQLl"
-                },
-                limit: 1000,
-                debug: false,
-            }
-        },
+        /** @Description 数据转换插件 */
+        `gatsby-transformer-remark`,
+        "gatsby-remark-images",
+        "gatsby-transformer-sharp",
+        `gatsby-plugin-netlify-cms`,
         {
             resolve: `gatsby-plugin-mdx`,
             options: {
@@ -41,10 +17,17 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 1200,
+                            maxWidth: 600,
                         },
                     },
                 ],
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `mdx`,
+                path: `${__dirname}/mdx`,
             },
         },
         {

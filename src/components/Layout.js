@@ -1,10 +1,11 @@
 import React from "react";
 import {Once} from "./Once";
 import clsx from "clsx";
-import {graphql, Link, useStaticQuery} from "gatsby";
+import {graphql, navigate, useStaticQuery} from "gatsby";
+import {Button} from "./Button";
 
 export const Layout = (props) => {
-    const {children} = props;
+    const {children, cs} = props;
     const data = useStaticQuery(
         graphql`
       query {
@@ -19,17 +20,17 @@ export const Layout = (props) => {
     return (
         <Once cs={"layout"}>
             <Once cs={"header"}>
-                <Once>
+                <Once cs={"title"} onClick={() =>
+                    navigate("/")
+                }>
                     {data.site.siteMetadata.title}
                 </Once>
                 <Exp/>
-                <Link className={"Button"} to={`/`}>home</Link>
-                <Link className={"Button"} to={`/files/`}>files</Link>
-
-                <Link className={"Button"} to={`/404/`}>About</Link>
-
+                <Button className={"Button"} onClick={() => navigate('/post/')} label={"post"}/>
+                <Button className={"Button"} onClick={() => navigate('/portfolio/')} label={"portfolio"}/>
+                <Button className={"Button"} onClick={() => navigate(`/404/`)} label={'About'}/>
             </Once>
-            <Once cs={"body"}>{children}</Once>
+            <Once cs={clsx("body", cs)}>{children}</Once>
         </Once>
     );
 }

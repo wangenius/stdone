@@ -1,17 +1,13 @@
 @charset "UTF-8";
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/*font size*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+/*cursor*/
 /*border radius*/
 /*border*/
 /*padding*/
 /*height and size*/
 /*width*/
-/*cursor*/
 /*transition*/
 /*z index*/
 /*border*/
@@ -23,13 +19,54 @@ Flex
 /*
 
 scroll*/
-/*font size*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: url("/icon/default.png"), auto;
+}
+
+/*cursor*/
 /*border radius*/
 /*border*/
 /*padding*/
 /*height and size*/
 /*width*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
 /*cursor*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
 /*transition*/
 /*z index*/
 /*border*/
@@ -47,7 +84,7 @@ scroll*/
 /*background*/
 .Button {
   cursor: url("/icon/hand.png"), pointer;
-  height: 30px;
+  height: 40px;
   border-radius: 8px;
   position: relative;
   user-select: none;
@@ -77,7 +114,7 @@ scroll*/
   display: inline-block;
   vertical-align: middle;
   font-family: "sans-serif";
-  font-size: 0.815rem;
+  font-size: 0.92rem;
   color: #71717a;
 }
 .Button:hover {
@@ -87,13 +124,12 @@ scroll*/
   color: #0f172a;
 }
 
-/*font size*/
+/*cursor*/
 /*border radius*/
 /*border*/
 /*padding*/
 /*height and size*/
 /*width*/
-/*cursor*/
 /*transition*/
 /*z index*/
 /*border*/
@@ -109,13 +145,12 @@ scroll*/
 */
 /*char*/
 /*background*/
-/*font size*/
+/*cursor*/
 /*border radius*/
 /*border*/
 /*padding*/
 /*height and size*/
 /*width*/
-/*cursor*/
 /*transition*/
 /*z index*/
 /*border*/
@@ -132,25 +167,201 @@ scroll*/
   height: 100%;
 }
 .layout .header {
-  padding: 0 20px;
-  background-color: #eeeeee;
+  margin: auto;
+  max-width: 960px;
+  padding: 0 30px 0 40px;
   z-index: 20;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60px;
+  height: 100px;
+}
+.layout .header .title {
+  user-select: none;
+  cursor: url("/icon/hand.png"), pointer;
+  font-family: "Yeseva One", cursive;
+  font-size: 2rem;
 }
 .layout .body {
   width: 100%;
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
   height: calc(100% - 60px);
 }
 
 .Hangover {
   flex: 1;
+}
+
+.posts {
+  margin-top: 60px;
+}
+
+/*cursor*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
+.postcard {
+  margin: 20px;
+  display: block;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 250px;
+  transition: all 0.15s ease;
+  overflow: hidden;
+}
+.postcard .head {
+  height: 60px;
+}
+.postcard .title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.postcard .description {
+  height: 60px;
+}
+
+.post .divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.13);
+  margin: 20px 0;
+}
+.post .title {
+  font-size: 2.5rem;
+  margin: 60px 0;
+}
+.post h1 {
+  font-size: 2.2rem;
+  margin: 60px 0;
+  font-weight: 300;
+}
+.post h2 {
+  font-size: 2.3rem;
+  margin: 30px 0;
+  font-weight: 100;
+}
+.post p {
+  text-indent: 2rem;
+  margin: 10px 0;
+}
+.post p, .post span, .post li {
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.post li {
+  margin-left: 30px;
+}
+.post li p {
+  text-indent: 0;
+}
+.post * {
+  font-family: "HarmonyOS Sans SC", "Noto Sans SC", "Roboto", sans-serif;
+}
+.post pre div {
+  border-radius: 12px !important;
+}
+.post code * {
+  line-height: 1.5rem;
+  font-family: "jr", sans-serif;
+  letter-spacing: 0;
+}
+.post h3, .post h4, .post h5 {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+.post img {
+  width: 80%;
+  margin: auto;
+  border-radius: 16px;
+}
+.post blockquote {
+  margin: 30px 0;
+  padding: 0 15px;
+  line-height: 1rem;
+  border-left: 6px #e0dbd9 solid;
+}
+.post blockquote * {
+  text-indent: 0;
+}
+
+/*cursor*/
+/*border radius*/
+/*border*/
+/*padding*/
+/*height and size*/
+/*width*/
+/*transition*/
+/*z index*/
+/*border*/
+/*font*/
+/*shadow*/
+/*
+Flex
+*/
+/*
+
+scroll*/
+.home .main_bar {
+  height: 360px;
+  width: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("http://39.96.54.181:88/other/黑暗中漫舞/黑暗中漫舞.jpg");
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 5px 8px 0px, rgba(0, 0, 0, 0.12) 0px 1px 14px 0px;
+  transition: all 200ms ease;
+}
+.home .main_card {
+  margin-top: 60px;
+  position: relative;
+}
+.home .main_card .avatar {
+  position: absolute;
+  right: 20px;
+}
+.home .main_card .hi {
+  height: 120px;
+  line-height: 120px;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  box-sizing: border-box;
+  min-width: 0;
+  font-weight: 700;
+  color: var(--theme-ui-colors-heading);
+}
+.home .main_card .typing {
+  text-align: justify;
+  text-indent: 2rem;
+  font-size: 1.2em;
+  font-family: "HarmonyOS Sans SC", "Noto Sans SC", "Roboto", sans-serif;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  cursor: url("/icon/hand.png"), pointer;
+}
+.home .main_card .typing:hover {
+  text-decoration: underline 2px;
 }
 
 /*# sourceMappingURL=index.css.map */
