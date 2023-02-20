@@ -1,0 +1,61 @@
+{
+  "name": "wangenius",
+  "header": [
+    {
+      "name": "home",
+      "url": "/"
+    },
+    {
+      "name": "post",
+      "url": "/post/"
+    },
+    {
+      "name": "portfolio",
+      "url": "/portfolio/"
+    },
+    {
+      "name": "about",
+      "url": "/about/"
+    },
+    {
+      "name": "Resume",
+      "url": "/resume/"
+    }
+  ],
+  "footer": [
+    {
+      "name": "contact",
+      "item": [
+        {
+          "url": "https://space.bilibili.com/247967944",
+          "name": "bilibili"
+        },
+        {
+          "url": "https://github.com/wangenius",
+          "name": "github"
+        },
+        {
+          "url": "https://weibo.com/u/6320492937",
+          "name": "weibo"
+        }
+      ]
+    },
+    {
+      "name": "production",
+      "item": [
+        {
+          "url": "/seeader/",
+          "name": "seeader"
+        },
+        {
+          "url": "/plugins/",
+          "name": "plugins"
+        },
+        {
+          "url": "/rhino/",
+          "name": "rhino & grasshopper"
+        }
+      ]
+    }
+  ]
+}

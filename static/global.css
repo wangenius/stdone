@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "jr";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url(/font/tt.woff2) format("woff2");
+}
+
+
+@font-face {
+  font-family: "YesevaOne";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url(/font/YesevaOne.woff2) format("woff2");
+}
+
+
+@font-face {
+  font-family: "medium";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url(/font/medium.woff2) format("woff2");
+}
+
+
+
+@font-face {
+  font-family: "Regular";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url(/font/regular.woff2) format("woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a, a * {
+  cursor: pointer;
+}

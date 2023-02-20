@@ -1,0 +1,20 @@
+{
+  "name": "wangenius",
+  "sites": [
+    {
+      "url": "https://space.bilibili.com/247967944",
+      "name": "bilibili",
+      "icon": "<RiBilibiliFill/>"
+    },
+    {
+      "url": "https://github.com/wangenius",
+      "name": "github",
+      "icon": "<RiGithubFill/>"
+    },
+    {
+      "url": "https://weibo.com/u/6320492937",
+      "name": "weibo",
+      "icon": "<RiWeiboFill/>"
+    }
+  ]
+}

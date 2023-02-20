@@ -26,20 +26,10 @@ const codeStyles = {
 const NotFoundPage = () => {
     return (
         <main style={pageStyles}>
-            <h1 style={headingStyles}>Page not found</h1>
-            <p style={paragraphStyles}>
-                Sorry 😔, we couldn’t find what you were looking for.
-                <br/>
-                {process.env.NODE_ENV === "development" ? (
-                    <>
-                        <br/>
-                        Try creating a page in <code style={codeStyles}>src/pages/</code>.
-                        <br/>
-                    </>
-                ) : null}
-                <br/>
-                <Link to="/">Go home</Link>.
-            </p>
+            <button
+                className="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                Primary
+            </button>
         </main>
     )
 }
