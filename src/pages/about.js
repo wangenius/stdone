@@ -1,11 +1,13 @@
 import React from "react"
 import {Layout} from "../components/Layout";
+import {Status} from "../components/index/Status";
 
 const About = ()=>{
 
 
 
     return <Layout>
+        <Status/>
         <div className="bg-white py-6 sm:py-8 lg:py-12">
             <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
                 <div className="mb-10 md:mb-16">

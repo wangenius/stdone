@@ -1,0 +1,13 @@
+{
+  "md": {
+    "frontmatter": [
+      "author",
+      "date",
+      "description",
+      "slug",
+      "title",
+      "type",
+      "cover"
+    ]
+  }
+}

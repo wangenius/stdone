@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import {graphql, StaticQuery} from "gatsby";
 import logo from '../../static/icon.svg'
 import {useWindowScroll} from "react-use";
@@ -7,6 +7,19 @@ import me from "../../static/me.json"
 export const Header = () => {
     const {y} = useWindowScroll()
     const Ref = useRef()
+
+    const [state, setState] = useState(true)
+
+    const toggleState = () => {
+        setState(prevState => !prevState)
+    }
+
+    useEffect(() => {
+
+        if (state) Ref.current.classList.add('hidden')
+        else Ref.current.classList.remove('hidden')
+    }, [state])
+
 
     return <StaticQuery query={graphql`
       query {
@@ -18,8 +31,8 @@ export const Header = () => {
       }
     `} render={(data) => {
 
-        return <nav ref={Ref}
-                    className="transition-shadow z-50  sticky top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
+        return <nav onClick={toggleState}
+                    className="transition-shadow z-50 h-14 md:h-20 sticky top-0 bg-white border-gray-200 px-2 sm:px-4 py-3 dark:bg-gray-900"
                     style={{boxShadow: y > 10 ? " rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" : "none"}}>
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="/" className="flex items-center">
@@ -27,7 +40,7 @@ export const Header = () => {
                     <span
                         className="self-center text-xl font-extrabold whitespace-nowrap dark:text-white">{data.site.siteMetadata.title}</span>
                 </a>
-                <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+                <div ref={Ref} className="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul
                         className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         {

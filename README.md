@@ -1,3 +1,3 @@
-## 🚀 Quick start
+# 🚀 Quick start
 
 **a Gatsby site.**

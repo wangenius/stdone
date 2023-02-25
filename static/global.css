@@ -1,6 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .c_blue {
+    color: #36f;
+  }
+  .b_blue {
+    background-color: #3366ff;
+  }
+  .p_text {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.96rem;
+    line-height: 1.8rem;
+    text-indent: 2rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+}
+.post {
+  max-width: 900px;
+  margin: auto;
+}
+.post hr {
+  padding: 20px 0;
+}
+.post h1 {
+  font-size: 1.8rem;
+  line-height: 4rem;
+}
+.post h2 {
+  font-size: 1.8rem;
+  line-height: 6rem;
+}
+.post h3 {
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+.post h4 {
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+.post h5 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.post h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.post blockquote {
+  position: relative;
+  padding-left: 20px;
+  margin: 20px;
+}
+.post blockquote:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #3366ff;
+}
+.post ol {
+  margin: 10px 20px;
+}
+.post li {
+  line-height: 1.8rem;
+  list-style: circle;
+  text-indent: 0;
+}
+.post li p {
+  text-indent: 0;
+}
+.post img {
+  max-width: 80%;
+  margin: 20px auto;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -13,8 +93,6 @@
   font-style: normal;
   src: url(/font/tt.woff2) format("woff2");
 }
-
-
 @font-face {
   font-family: "YesevaOne";
   font-weight: 100 900;
@@ -22,8 +100,6 @@
   font-style: normal;
   src: url(/font/YesevaOne.woff2) format("woff2");
 }
-
-
 @font-face {
   font-family: "medium";
   font-weight: 100 900;
@@ -31,9 +107,6 @@
   font-style: normal;
   src: url(/font/medium.woff2) format("woff2");
 }
-
-
-
 @font-face {
   font-family: "Regular";
   font-weight: 100 900;
@@ -41,7 +114,6 @@
   font-style: normal;
   src: url(/font/regular.woff2) format("woff2");
 }
-
 * {
   padding: 0;
   margin: 0;
@@ -51,3 +123,5 @@
 a, a * {
   cursor: pointer;
 }
+
+/*# sourceMappingURL=global.css.map */

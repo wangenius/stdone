@@ -13,6 +13,7 @@ query MyQuery {
           slug
           title
           date
+          cover
         }
       }
     }

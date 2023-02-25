@@ -8,7 +8,7 @@ export const Layout = (props) => {
     return (
         <div className={"layout relative min-h-screen"}>
             <Header/>
-            <div className={"pb-96 container mx-auto"}>{children}</div>
+            <div className={"pb-96 px-2 md:px-20 container mx-auto"}>{children}</div>
             <div className={"pb-96 lg:hidden"}/>
             <Footer/>
         </div>

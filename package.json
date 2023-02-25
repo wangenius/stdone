@@ -63,5 +63,8 @@
     "gatsby-plugin-postcss": "^6.6.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
+  },
+  "resolutions": {
+    "babel-plugin-lodash/@babel/types": "~7.20.0"
   }
 }
